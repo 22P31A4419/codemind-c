@@ -1,9 +1,8 @@
 #include<stdio.h>
-int main()
-{
+int main(){
     int r;
     scanf("%d",&r);
-    float c;
-    c=3.14*r*r;
-    printf("%0.2f",c);
+    float a;
+    a=3.14*r*r;
+    printf("%.2f",a);
 }
