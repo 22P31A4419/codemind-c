@@ -3,31 +3,34 @@ int main()
 {
     int t;
     scanf("%d",&t);
-    while(t!=0)
+    while(t>0)
     {
-        int n,a,b,k,c;
-        scanf("%d%d%d%d",&n,&a,&b,&k);
+        long long int n,a,b,k,c1,c2;
+        scanf("%lld%lld%lld%lld",&n,&a,&b,&k);
         if(a%b==0)
         {
-            c=n/b-n/a;
+            c1=-(n/a-n/b);
+           
         }
         else if(b%a==0)
         {
-            c=n/a-n/b;
+            c1=-(n/b-n/a);
+            
         }
+       
         else
         {
-            c=n/a+n/b-2*(n/(a*b));
+             c2=b-2*(n/a*b);
+            c1=(n/a-n/c2);
         }
-        if (c>=k)
-        printf("Win
-");
-        else
+        if(c1>=k)
         {
-            printf("Lose
+            printf("Win
 ");
         }
+        else
+        printf("Lose
+");
         t--;
     }
-    return 0;
 }
